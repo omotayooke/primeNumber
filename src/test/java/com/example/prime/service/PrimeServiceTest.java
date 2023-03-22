@@ -19,7 +19,7 @@ public class PrimeServiceTest {
     private PrimeService primeService;
 
     @Test
-    public void getAllPrimeNumbers() throws Exception {
+    public void getAllPrimeNumbers() {
         List<Integer> expected = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19);
         List<Integer> result = primeService.getAllPrimeNumbers(19);
         assertEquals(8, result.size());
@@ -27,8 +27,7 @@ public class PrimeServiceTest {
     }
 
     @Test
-    public void getAllPrimeNumbersWithNullResult() throws Exception {
-        List<Integer> expected = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19);
+    public void getAllPrimeNumbersWithNullResult() {
         List<Integer> result = primeService.getAllPrimeNumbers(1);
         assertEquals(new ArrayList<>(), result);
     }
