@@ -22,7 +22,6 @@ public class ApiControllerTest {
     PrimeService primeService;
     private MockMvc mockMvc;
 
-
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
@@ -36,7 +35,6 @@ public class ApiControllerTest {
         MvcResult result =  mockMvc.perform(get("/primes/10")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn();
-
         assertNotNull(result);
         String actualString = result.getResponse().getContentAsString();
         assertEquals(jsonStringExpected, actualString);
