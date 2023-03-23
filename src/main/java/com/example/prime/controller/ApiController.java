@@ -41,6 +41,7 @@ public class ApiController {
             return ResponseEntity.status(HttpStatus.OK).body(response);
         }
         else{
+            response.setError("No prime number found");
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
         }
     }
